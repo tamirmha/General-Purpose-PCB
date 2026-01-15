@@ -6,7 +6,7 @@ Use [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) to
 - **Name**: Lidor Simhi
 - **GitHub**: [LidorSimhi](https://github.com/Meluhlah)
 
-![3D Rendering](./images/Isometric View.png)
+![3D Rendering](./images/IsometricView.png)
 ![Top View](./images/TopView.png) 
 ![Bottom View](./images/BotView.png)
 
