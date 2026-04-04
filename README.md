@@ -1,5 +1,7 @@
 # General Purpose STM32G0 Development Board
 
+![General Purpose PCB](./images/20260401_105217.jpg)
+
 Welcome to the General Purpose STM32G0 Development Board project repository! This project features a comprehensive testing and development PCB designed around the STM32G0 microcontroller. The board is engineered to integrate multiple industrial and hobbyist protocols into a single platform, including DC-DC power management, motor drivers, and versatile communication interfaces[cite: 1]. The project includes manufacturing files (Gerber), Bill of Materials (BOM), Pick and Place files, and the STM32 configuration file.
 Use [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) to manage and upload the code to the STM32 microcontroller.
 ## Developer
@@ -9,7 +11,8 @@ Use [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) to
 ![3D Rendering](./images/IsometricView.png)
 ![Top View](./images/TopView.png) 
 ![Bottom View](./images/BotView.png)
-
+![PCB](./images/20260401_105204.jpg)
+![BOTTOM PCB](./images/20260401_105236.jpg)
 
 ## Contents
 
