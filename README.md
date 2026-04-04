@@ -119,9 +119,9 @@ To replicate or use this project, follow these steps:
 
 This project was created to provide a robust general-purpose testing platform. Feel free to contribute by submitting pull requests or reporting issues.
 
-## Sponsors
-This project is proudly sponsored by [PCBWay](https://pcbway.com/g/lxAijI).\
-[PCBWay](https://pcbway.com/g/lxAijI)  provided the manufacturing of the PCB boards and 3D printing services for this project.
+## Sponsors 
+A huge thanks to [PCBWay](https://pcbway.com/g/lxAijI) for sponsoring this project! 
+Their support didn't stop at manufacturing – their team provided incredible post-shipping customer service and actively helped me navigate customs clearance to ensure the boards arrived safely and without delay. Highly recommended!
 
 [PCBWay](https://pcbway.com/g/lxAijI)  is a one-stop solution for PCB prototyping, manufacturing, and assembly, as well as 3D printing services. Their high-quality products and excellent customer service make them a top choice for electronics enthusiasts and professionals alike.\
 Visit [PCBWay](https://pcbway.com/g/lxAijI) for more information on their services and to get started on your own projects!
