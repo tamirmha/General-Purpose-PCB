@@ -1,0 +1,2 @@
+USART1 Asynchronous (115200)
+TIM16 CH1 -> PWM

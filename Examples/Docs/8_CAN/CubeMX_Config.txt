@@ -1,0 +1,1 @@
+FDCAN1 (PD0/PD1) Enabled (Classic CAN mode)

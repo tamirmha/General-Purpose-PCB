@@ -1,0 +1,2 @@
+PB1 (THERMISTOR) -> ADC1_IN9 (Enable)
+Link math library ('m')

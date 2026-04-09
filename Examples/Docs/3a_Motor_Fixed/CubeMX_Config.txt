@@ -1,0 +1,3 @@
+TIM16 CH1 (PB8) -> PWM (ARR=1000)
+MOTOR_CW/CCW -> Inputs
+MOTOR_DIR (PB9) -> Output

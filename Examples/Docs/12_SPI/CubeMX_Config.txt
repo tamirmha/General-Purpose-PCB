@@ -1,0 +1,2 @@
+SPI2 (PB13/14/15) -> Full-Duplex Master
+PB12 (SPI_NCS) -> GPIO_Output
