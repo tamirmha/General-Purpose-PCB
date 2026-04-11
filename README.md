@@ -90,9 +90,11 @@ The repository is organized as follows:
 <br>&nbsp;&nbsp;&nbsp;&nbsp;├── [Gerbers](./Hardware/Gerbers/)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Gerber files for PCB Manufacturing
 <br>&nbsp;&nbsp;&nbsp;&nbsp;├── [BOM](./Hardware/BOM/) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Bill of Materials
 <br>&nbsp;&nbsp;&nbsp;&nbsp;├── [PickAndPlace](./Hardware/PickAndPlace/) &nbsp;# Automated assembly files
+<br> [Examples](./Examples/) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Comprehensive C source code examples and HOW_TO_USE
 <br>/[Docs](./Docs/) &nbsp;&nbsp;&nbsp;&nbsp; # Datasheets for components and Pinout Diagrams
 <br>/[Images](./images/) &nbsp;&nbsp;&nbsp;&nbsp; # Datasheets for components and Pinout Diagrams
 <br>/README.md
+
 
 ## Usage
 
