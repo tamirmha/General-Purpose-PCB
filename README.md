@@ -95,6 +95,48 @@ The repository is organized as follows:
 <br>/[Images](./images/) &nbsp;&nbsp;&nbsp;&nbsp; # Datasheets for components and Pinout Diagrams
 <br>/README.md
 
+## Examples
+
+This repository includes a comprehensive suite of C code examples to help you test the board's hardware, learn embedded concepts, and implement industrial protocols. You can find these files in the `\Examples` directory.
+
+> **💡 Need Help Running These?** > Check the `HOW_TO_USE` text document and the detailed markdown documentation located right inside the `\Examples` folder! They contain step-by-step wiring guides, CubeMX parameter settings, and explanations of the code for every single file below.
+
+### How to Use the Examples
+The codebase is structured so that all examples live in the same project without conflicting. We use macro definitions to turn specific examples on or off:
+1. Open the `example_config.h` file.
+2. Uncomment the specific `#define` for the example you want to run (e.g., `#define EX_1_BASIC_GPIO`).
+3. Ensure all other example definitions are commented out.
+4. Compile and flash!
+
+### Available Examples 
+
+* **1. GPIO & Power Loads**
+    * `ex1_basic_gpio.c`: Basic momentary button reading and driving an inductive solenoid load via PWM.
+    * `ex1_1_basic_gpio.c`: Advanced "Hit-and-Hold" toggle logic to actuate a solenoid at 100% power and hold it at 50% to save energy.
+* **2. Analog Interfaces**
+    * `ex2_analog.c`: Reads a potentiometer via the ADC and perfectly mirrors the output voltage in real-time using the DAC.
+* **3. DC Motor Control**
+    * `ex3a_motor_fixed.c`: Basic H-bridge control using buttons for fixed-speed CW and CCW rotation.
+    * `ex3b_motor_analog.c`: Uses a potentiometer to dynamically control the PWM speed of the motor.
+    * `ex3c_motor_serial.c`: Non-blocking UART control to command motor speed and direction via serial terminal.
+* **4. Servo Motor Control**
+    * `ex4a_servo_buttons.c`: Generates strict 50Hz PWM signals to drive a 5V RC servo to fixed angles using buttons.
+    * `ex4b_servo_analog.c`: Scales a potentiometer's ADC reading to smoothly sweep a servo arm 180 degrees.
+* **5. Motor Feedback**
+    * `ex5_encoder.c`: Reads an incremental quadrature encoder to track infinite rotational position and direction.
+* **6-8. Communication Protocols**
+    * `ex6_rs485.c`: Implementation of the robust RS-485 industrial serial protocol.
+    * `ex7_i2c.c`: Two-wire I2C communication for external sensors and displays.
+    * `ex8_can.c`: Controller Area Network (CAN Bus) implementation for high-reliability automotive/industrial networks.
+* **10-11. Digital Logic & Sensors**
+    * `ex10_dip_switch.c`: Reads the onboard DIP switches to form a binary number, dynamically changing the LED blink rate.
+    * `ex11_digital_sensor.c`: Polling logic for reading standard digital sensors (proximity, limit switches).
+* **12-14. Advanced Modules**
+    * `ex12_spi.c`: High-speed SPI communication protocol.
+    * `ex13_ws2812.c`: Drives WS2812B addressable RGB LEDs.
+    * `ex13_1_ws2813_ADC.c`: Dynamically controls addressable LEDs using analog ADC inputs.
+    * `ex14_thermistor.c`: Reads and converts analog data into real-world temperature values.
+
 
 ## Usage
 
