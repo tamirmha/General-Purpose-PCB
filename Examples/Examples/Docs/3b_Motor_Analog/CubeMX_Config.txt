@@ -1,0 +1,2 @@
+ADC1 Enabled
+TIM16 CH1 -> PWM (ARR=1000)

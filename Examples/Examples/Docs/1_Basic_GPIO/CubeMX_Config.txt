@@ -1,0 +1,3 @@
+BTN1_Pin (PB4) -> GPIO_Input
+PCB_LED_Pin (PC13) -> GPIO_Output
+SOLENOID_SIG_Pin (PA7) -> GPIO_Output

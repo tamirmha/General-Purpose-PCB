@@ -1,0 +1,2 @@
+PB0 (DIGITAL_SENS) -> GPIO_Input
+PC13 (PCB_LED) -> GPIO_Output

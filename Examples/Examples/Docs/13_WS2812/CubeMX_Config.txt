@@ -1,0 +1,2 @@
+PA6 (WS2812B_SIG) -> TIM3_CH1 PWM (ARR=79)
+DMA Enabled

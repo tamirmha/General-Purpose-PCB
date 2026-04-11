@@ -1,0 +1,2 @@
+ADC1 Enabled
+TIM2 CH1 (PA15) -> PWM (50Hz setup)

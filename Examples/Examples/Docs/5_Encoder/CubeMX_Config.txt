@@ -1,0 +1,1 @@
+TIM1 (PA8/PA9) -> Encoder Mode (CH1 & CH2)
