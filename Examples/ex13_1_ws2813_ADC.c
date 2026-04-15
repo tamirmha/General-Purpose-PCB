@@ -7,7 +7,7 @@
 extern ADC_HandleTypeDef hadc1;
 extern TIM_HandleTypeDef htim3;
 
-#define NUM_LEDS 5 
+#define NUM_LEDS 9
 
 // --- FIX 1: INCREASE RESET PULSE ---
 // Modern WS2812B chips require >280us of silence to latch the colors.
@@ -15,8 +15,8 @@ extern TIM_HandleTypeDef htim3;
 #define RESET_PULSE 250
 #define DMA_BUFF_SIZE ((NUM_LEDS * 24) + RESET_PULSE)
 
-#define WS2812_0_BIT 6
-#define WS2812_1_BIT 13
+#define WS2812_0_BIT 26
+#define WS2812_1_BIT 53
 
 uint32_t pwm_dma_buffer[DMA_BUFF_SIZE] = {0};
 uint32_t adc_value = 0;
@@ -27,12 +27,12 @@ void WS2812_SetColor(uint16_t led_index, uint8_t r, uint8_t g, uint8_t b, uint32
     // Dead zone for potentiometer noise at the bottom
     if (raw_adc < 150)        	raw_adc = 0;
     // Cap at 1365 due to the board's 1/3 hardware voltage divider
-    if (raw_adc > 1365)         raw_adc = 1365;
+    if (raw_adc > 2068)         raw_adc = 2068;
 
     // Scale the colors based on the ADC brightness
-    uint32_t bright_r = (r * raw_adc) / 1365;
-    uint32_t bright_g = (g * raw_adc) / 1365;
-    uint32_t bright_b = (b * raw_adc) / 1365;
+    uint32_t bright_r = (r * raw_adc) / 2068;
+    uint32_t bright_g = (g * raw_adc) / 2068;
+    uint32_t bright_b = (b * raw_adc) / 2068;
 
     // Combine into WS2812 format (Green-Red-Blue)
     uint32_t color = (bright_g << 16) | (bright_r << 8) | bright_b;
@@ -60,19 +60,19 @@ void Run_Example(void) {
         }
         HAL_ADC_Stop(&hadc1);
         // Generate 3 random numbers between 0 and 255
+
+        // Your pure white LED test (255, 255, 255)
+        for(int i = 0; i < NUM_LEDS; i++)
+        {
             uint8_t rand_r = rand() % 256;
             uint8_t rand_g = rand() % 256;
             uint8_t rand_b = rand() % 256;
-        // Your pure white LED test (255, 255, 255)
-        WS2812_SetColor(0, rand_r, rand_g, rand_b, adc_value);
-//        WS2812_SetColor(1, 255, 255, 255, adc_value);
-//        WS2812_SetColor(2, 255, 255, 255, adc_value);
-//        WS2812_SetColor(3, 255, 255, 255, adc_value);
-//        WS2812_SetColor(4, 255, 255, 255, adc_value);
+        	WS2812_SetColor(i, rand_r, rand_g, rand_b, adc_value);
+        }
 
         WS2812_Update();
 
-        HAL_Delay(30);
+        HAL_Delay(500);
     }
 }
 

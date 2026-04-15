@@ -6,12 +6,13 @@
 extern TIM_HandleTypeDef htim3;
 
 
-#define NUM_LEDS 5 
+#define NUM_LEDS 10
 #define RESET_PULSE 40 
 #define DMA_BUFF_SIZE ((NUM_LEDS * 24) + RESET_PULSE)
 // PWM duty cycle values (Assuming ARR = 19 for a 16MHz clock)
-#define WS2812_0_BIT 6   // ~33% duty cycle for a '0'
-#define WS2812_1_BIT 13  // ~66% duty cycle for a '1'
+#define WS2812_0_BIT 26
+#define WS2812_1_BIT 53
+
 uint32_t pwm_dma_buffer[DMA_BUFF_SIZE] = {0};
 
 void WS2812_SetColor(uint16_t led_index, uint8_t r, uint8_t g, uint8_t b) {
@@ -19,11 +20,10 @@ void WS2812_SetColor(uint16_t led_index, uint8_t r, uint8_t g, uint8_t b) {
     uint32_t color = (g << 16) | (r << 8) | b; 
     uint32_t start_idx = led_index * 24;
     for (int i = 23; i >= 0; i--) {
-        if (color & (1 << i)) {
+        if (color & (1 << i))
             pwm_dma_buffer[start_idx + (23 - i)] = WS2812_1_BIT;
-        } else {
+         else
             pwm_dma_buffer[start_idx + (23 - i)] = WS2812_0_BIT;
-        }
     }
 }
 void WS2812_Update(void) {
@@ -32,12 +32,16 @@ void WS2812_Update(void) {
 
 void Run_Example(void) {
     
-        WS2812_SetColor(0, 255, 255, 255);
-//        WS2812_SetColor(1, 0, 255, 0);
-        WS2812_Update();
-    
     while(1) {
-        HAL_Delay(100);
+        for(int i = 0; i < NUM_LEDS; i++)
+		  {
+			uint8_t rand_r = rand() % 64;
+			uint8_t rand_g = rand() % 64;
+			uint8_t rand_b = rand() % 64;
+			WS2812_SetColor(i, rand_r, rand_g, rand_b);
+		  }
+	   WS2812_Update();
+       HAL_Delay(500);
     }
 }
 

@@ -9,6 +9,7 @@
 // #define EX_3A_MOTOR_FIXED
 // #define EX_3B_MOTOR_ANALOG
 // #define EX_3C_MOTOR_SERIAL
+ #define EX_3D_MOTOR_ENCODER
 // #define EX_4A_SERVO_BUTTONS
 // #define EX_4B_SERVO_ANALOG
 // #define EX_5_ENCODER
@@ -19,7 +20,7 @@
 // #define EX_11_DIGITAL_SENSOR
 // #define EX_12_SPI
 // #define EX_13_WS2812
-#define EX_13_1_WS2812_ADC
+// #define EX_13_1_WS2812_ADC
 // #define EX_14_THERMISTOR
 
 #endif // EXAMPLE_CONFIG_H
