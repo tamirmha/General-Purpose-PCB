@@ -13,9 +13,9 @@ void Run_Example(void) {
     
     while(1) {
         
-        uint8_t bit0 = (HAL_GPIO_ReadPin(DIP1_GPIO_Port, DIP1_Pin) == GPIO_PIN_SET) ? 1 : 0;
+        uint8_t bit2 = (HAL_GPIO_ReadPin(DIP1_GPIO_Port, DIP1_Pin) == GPIO_PIN_SET) ? 1 : 0;
         uint8_t bit1 = (HAL_GPIO_ReadPin(DIP2_GPIO_Port, DIP2_Pin) == GPIO_PIN_SET) ? 1 : 0;
-        uint8_t bit2 = (HAL_GPIO_ReadPin(DIP3_GPIO_Port, DIP3_Pin) == GPIO_PIN_SET) ? 1 : 0;
+        uint8_t bit0 = (HAL_GPIO_ReadPin(DIP3_GPIO_Port, DIP3_Pin) == GPIO_PIN_SET) ? 1 : 0;
         dip_value = (bit2 << 2) | (bit1 << 1) | bit0;
         blink_delay = (dip_value + 1) * 100;
 

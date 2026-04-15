@@ -1,1 +1,0 @@
-I2C2 (PB10/PB11) Enabled (Standard Mode 100kHz)

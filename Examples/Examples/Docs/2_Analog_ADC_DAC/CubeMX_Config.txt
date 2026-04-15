@@ -1,2 +1,0 @@
-ADC1_IN0 (PA0) -> Enable
-DAC1_OUT1 (PA4) -> Enable

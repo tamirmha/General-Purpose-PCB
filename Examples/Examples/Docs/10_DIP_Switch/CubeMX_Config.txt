@@ -1,2 +1,0 @@
-PB3/PF0/PF1 -> GPIO_Input
-PC13 -> GPIO_Output

@@ -1,2 +1,0 @@
-USART2 Asynchronous
-Hardware Flow Control (RS485) enabled on PA1
