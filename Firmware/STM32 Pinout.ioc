@@ -1,9 +1,10 @@
 #MicroXplorer Configuration settings - do not modify
-ADC1.Channel-0\#ChannelRegularConversion=ADC_CHANNEL_0
-ADC1.IPParameters=Rank-0\#ChannelRegularConversion,Channel-0\#ChannelRegularConversion,SamplingTime-0\#ChannelRegularConversion,NbrOfConversionFlag,master,SelectedChannel
+ADC1.Channel-0\#ChannelRegularConversion=ADC_CHANNEL_9
+ADC1.IPParameters=Rank-0\#ChannelRegularConversion,Channel-0\#ChannelRegularConversion,SamplingTime-0\#ChannelRegularConversion,NbrOfConversionFlag,master,SelectedChannel,SamplingTimeCommon1
 ADC1.NbrOfConversionFlag=1
 ADC1.Rank-0\#ChannelRegularConversion=1
 ADC1.SamplingTime-0\#ChannelRegularConversion=ADC_SAMPLINGTIME_COMMON_1
+ADC1.SamplingTimeCommon1=ADC_SAMPLETIME_160CYCLES_5
 ADC1.SelectedChannel=ADC_CHANNEL_0|ADC_CHANNEL_9|ADC_CHANNEL_10
 ADC1.master=1
 CAD.formats=
@@ -376,7 +377,7 @@ TIM2.Period=19999
 TIM2.Prescaler=15
 TIM3.Channel-PWM\ Generation1\ CH1=TIM_CHANNEL_1
 TIM3.IPParameters=Channel-PWM Generation1 CH1,Period
-TIM3.Period=19
+TIM3.Period=79
 USART1.IPParameters=VirtualMode-Asynchronous
 USART1.VirtualMode-Asynchronous=VM_ASYNC
 USART2.IPParameters=VirtualMode-Asynchronous,VirtualMode-Hardware Flow Control (RS485)

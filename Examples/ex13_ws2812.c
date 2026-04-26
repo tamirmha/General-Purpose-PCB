@@ -3,13 +3,13 @@
 
 #include "main.h"
 
+
 extern TIM_HandleTypeDef htim3;
 
 
 #define NUM_LEDS 10
 #define RESET_PULSE 40 
 #define DMA_BUFF_SIZE ((NUM_LEDS * 24) + RESET_PULSE)
-// PWM duty cycle values (Assuming ARR = 19 for a 16MHz clock)
 #define WS2812_0_BIT 26
 #define WS2812_1_BIT 53
 
